@@ -1,12 +1,13 @@
 import React from "react";
 import {toThousand} from '../utils';
 import {products} from '../data/products';
-
-
+import { useParams } from "react-router-dom";
 
 export const ProductDetail = () => {
 
-    const {id,name,price,discount,description, image} = products.find(product => product.id === 1)
+    const {id : idProduct} = useParams();
+
+    const {id,name,price,discount,description, image} = products.find(product => product.id === +idProduct)
 
   return (
     <div className="container products-wrapper">

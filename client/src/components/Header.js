@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -6,9 +7,9 @@ export const Header = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-5 col-md-2">
-            <a href="/" className="main-header_home-link">
+            <Link to="/" className="main-header_home-link">
               <img src="/images/logo-mercado-liebre.svg" />
-            </a>
+            </Link>
           </div>
 
           <div className="col-7 col-md-6">
@@ -40,27 +41,27 @@ export const Header = () => {
         <nav className="main-navbar">
           <ul className="left-navbar">
             <li>
-              <a href="/products">Todos los productos</a>
+              <Link to="/products">Todos los productos</Link>
             </li>
             <li>
-              <a href="#">Ofertas</a>
+              <Link to="#">Ofertas</Link>
             </li>
             <li>
-              <a href="#">Tiendas Oficiales</a>
+              <Link to="#">Tiendas Oficiales</Link>
             </li>
             <li>
-              <a href="/products/create">Vender</a>
+              <Link to="/products/create">Vender</Link>
             </li>
             <li>
-              <a href="#">Ayuda</a>
+              <Link to="#">Ayuda</Link>
             </li>
           </ul>
 
           <ul className="right-navbar">
             <li>
-              <a href="/users/profile">
+              <Link to="/users/profile">
                 Mi perfil <i className="far fa-address-card"></i>
-              </a>
+              </Link>
             </li>
             <li id="btn-cart">
               <button
@@ -74,20 +75,20 @@ export const Header = () => {
             </li>
 
             <li>
-              <a href="/users/logout">
+              <Link to="/users/logout">
                 Salir <i className="fas fa-sign-out-alt"></i>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="/users/register" id="link-register">
+              <Link to="/users/register" id="link-register">
                 Creá tu cuenta <i className="fas fa-address-card"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/users/login">
+              <Link to="/users/login">
                 Ingresá <i className="fas fa-sign-in-alt"></i>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
